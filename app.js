@@ -1,4 +1,5 @@
 "use strict";
+const path = require('path')
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -28,6 +29,11 @@ app.use((0, cors_1.default)());
 app.use('/user', user_1.default);
 app.use('/chat', chat_2.default);
 app.use('/group', group_2.default);
+app.use('/', (req, res) => {
+    const filePath = path.join(__dirname,`/${req.url}`)
+    console.log(filePath)
+    res.sendFile(filePath)
+})
 database_1.default.sync().then(() => {
     app.listen(Port, () => {
         console.log(`Server is Running on ${Port}`);

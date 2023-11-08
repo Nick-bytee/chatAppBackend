@@ -1,4 +1,5 @@
 "use strict";
+require('dotenv').config()
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 console.log(process.env.SQL_USERNAME, process.env.SQL_PASSWORD, process.env.SQL_HOST, process.env.SQL_DBNAME)
