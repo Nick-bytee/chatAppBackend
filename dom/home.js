@@ -4,7 +4,7 @@ $(document).ready(function () {
   const ps = new PerfectScrollbar(container);
 });
 
-const backendAPI = "http://localhost:3000";
+const backendAPI = "https://mchat-ywnl.onrender.com/";
 
 var selectedGroupID;
 

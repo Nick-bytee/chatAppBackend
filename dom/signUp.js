@@ -8,6 +8,7 @@ document.getElementById('signIn').addEventListener('click', () => {
     window.location.href = "./signIn.html"
 })
 
+const backendAPI = "https://mchat-ywnl.onrender.com/"
 
 async function checkPasswords(req, res) {
     const password = document.getElementById('password')
@@ -40,7 +41,7 @@ async function addUser(e) {
     if (password === password2.value) {
         const message = document.getElementById('errMessage')
         try {
-            const response = await axios.post('http://localhost:3000/user/addUser', myObj)
+            const response = await axios.post(`${backendAPI}/user/addUser`, myObj)
             console.log(response)
             if (response.data.success) {
                 message.innerHTML = response.data.message

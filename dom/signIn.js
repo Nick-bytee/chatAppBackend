@@ -1,4 +1,4 @@
-const backendAPI = "http://localhost:3000"
+const backendAPI = "https://mchat-ywnl.onrender.com/"
 
 const signInButton = document.getElementById('signIn')
 signInButton.addEventListener('click', login)
