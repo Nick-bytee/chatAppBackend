@@ -8,7 +8,7 @@ document.getElementById('signIn').addEventListener('click', () => {
     window.location.href = "./signIn.html"
 })
 
-const backendAPI = "https://mchat-ywnl.onrender.com/"
+const backendAPI = "https://mchat-ywnl.onrender.com"
 
 async function checkPasswords(req, res) {
     const password = document.getElementById('password')
